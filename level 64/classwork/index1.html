@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>საკლასო</title>
+    <style>
+        h1 {
+            text-align: left; 
+            font-size: 30px; 
+            font-weight: 400; 
+            color: black; 
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="title">გთხოვთ დააკლიკო</h1>
+
+<script>
+    document.getElementById("title").addEventListener("click", function() {
+        this.style.textAlign = "center";
+        this.style.fontSize = "50px";
+        this.style.fontWeight = "900";
+        this.style.color = "green";
+    });
+</script>
+

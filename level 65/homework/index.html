@@ -1,0 +1,42 @@
+<form>
+  <input type="text" id="textInput" placeholder="Enter something">
+  <button type="button" onclick="showAlert()">Submit</button>
+</form>
+
+<script>
+  function showAlert() {
+    let inputValue = document.getElementById("textInput").value;
+    alert(inputValue);
+  }
+</script>
+
+
+<form onsubmit="changeBackground(event)">
+  <input type="color" id="colorPicker">
+  <button type="submit">Set Background Color</button>
+</form>
+
+<script>
+  function changeBackground(event) {
+    event.preventDefault(); 
+    let chosenColor = document.getElementById("colorPicker").value;
+    document.body.style.backgroundColor = chosenColor;
+  }
+</script>
+
+<form>
+  <input type="text" id="firstName" placeholder="First Name">
+  <input type="text" id="lastName" placeholder="Last Name">
+  <button type="button" onclick="displayFullName()">Submit</button>
+</form>
+
+<h1 id="fullNameDisplay"></h1>
+
+<script>
+  function displayFullName() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    document.getElementById("fullNameDisplay").textContent = firstName + " " + lastName;
+  }
+</script>
+

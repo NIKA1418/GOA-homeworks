@@ -1,0 +1,24 @@
+<button id="changeBtn">Change Text</button>
+<p id="textPara">Original text</p>
+
+<script>
+const button = document.getElementById('changeBtn');
+const paragraph = document.getElementById('textPara');
+
+button.addEventListener('click', function () {
+  paragraph.textContent = "goa best!";
+  // ტექსტი შეიცვალა ღილაკზე დაჭერისას
+});
+</script>
+
+<script>
+function getRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+setInterval(() => {
+  document.body.style.backgroundColor = getRandomColor();
+  // ფონის ფერი იცვლება ყოველ 2 წამში
+}, 2000);
+</script>
+

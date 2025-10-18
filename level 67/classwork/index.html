@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ფორმის შექმნა</title>
+</head>
+<body>
+
+    <form id="userForm">
+        <input type="text" name="username" required placeholder="შეიყვანეთ სახელი"><br>
+        <input type="email" name="email" required placeholder="შეიყვანეთ ელფოსტა"><br>
+        <input type="password" name="password" required placeholder="შეიყვანეთ პაროლი"><br>
+        <button type="submit">გაგზავნა</button>
+    </form>
+
+    <script>
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            const form = event.target;
+            const formData = {
+                username: form.username.value,
+                email: form.email.value,
+                password: form.password.value
+            };
+
+            console.log("ფორმის მონაცემები:", formData);
+        });
+    </script>
+
+</body>
+</html>
+

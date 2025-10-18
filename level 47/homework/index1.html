@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Design</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .trunk {
+            width: 50px;
+            height: 200px;
+            background-color: saddlebrown;
+            border-radius: 10px;
+        }
+        .leaves {
+            position: absolute;
+            top: -120px;
+            width: 180px;
+            height: 150px;
+            background-color: green;
+            border-radius: 50%;
+            box-shadow: 
+                -50px -30px 0 20px green, 
+                50px -30px 0 20px green, 
+                0px -50px 0 30px green;
+        }
+    </style>
+</head>
+<body>
+    <div class="tree">
+        <div class="leaves"></div>
+        <div class="trunk"></div>
+    </div>
+</body>
+</html>

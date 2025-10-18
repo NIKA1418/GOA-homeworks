@@ -1,0 +1,28 @@
+const person = {
+    name: "ნიკა",
+    surname: "სულუხია  ",
+    academy: "გოა",
+    role: " ",
+    city: "თბილისი",
+    favColor: "შავი",
+    favLanguage: "html",
+    
+    sayHello: function() {
+        console.log("Hello");
+    },
+    
+    printProperty: function(property) {
+        console.log(this[property]);
+    }
+};
+
+console.log(person);
+
+console.log(person.name); // ან person["name"]
+
+person.city = "ბათუმი";
+console.log(person.city);
+
+person.sayHello();
+person.printProperty("favLanguage");
+

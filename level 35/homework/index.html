@@ -1,0 +1,120 @@
+რესპონსიული დიზაინი არის მიდგომა, რომელიც უზრუნველყოფს ვებსაიტის სწორად ფუნქციონირებას და ვიზუალურ კომფორტს სხვადასხვა მოწყობილობაზე (მაგალითად: ტელეფონი, ტაბლეტი, კომპიუტერი). მთავარი მიზანია, რომ ვებსაიტი იყოს ადაპტირებული ეკრანის სიგანესა და გარჩევადობას.
+რესპონსიულობის მიღწევის გზები:
+- CSS Media Queries: განსაზღვრეთ სტილის წესები კონკრეტული ეკრანის ზომებისთვის.
+- პროცენტული ზომები: გამოიყენეთ ზომები (%), რათა ელემენტები ავტომატურად ადაპტირდნენ.
+- Flexbox და CSS Grid: თანამედროვე ლაიაუტების დამუშავება მოქნილი ელემენტებისთვის.
+- სურათების ადაპტირება: გამოიყენეთ max-width: 100%; რათა სურათები არ გასცდეს მათი კონტეინერის ზომას.
+- რეაგირებადი ტიპოგრაფია: ზომების გამოყენება em ან rem ერთეულებით.
+
+
+ვიღებდით რაც შეიძლება ინტუიციურად: თექვსმეტობითი სისტემა (HEX) იყენებს 16-სიმბოლურ სისტემას, რომლისთვისაც გამოიყენება ციფრები 0-დან 9-მდე და ასოები A-დან F-მდე.
+HEX ჩანაწერის სტრუქტურა ფერის შესაქმნელად:
+- წითელი კომპონენტი (RR)
+- მწვანე კომპონენტი (GG)
+- ლურჯი კომპონენტი (BB)
+
+მაგალითად, ფერი #FF5733 ნიშნავს:
+- FF = 255 (Red)
+- 57 = 87 (Green)
+- 33 = 51 (Blue)
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Colors</title>
+    <style>
+        p:nth-child(1) { color: rgb(255, 0, 0); background-color: rgb(240, 248, 255); }
+        p:nth-child(2) { color: rgb(0, 255, 0); background-color: rgb(224, 255, 255); }
+        p:nth-child(3) { color: rgb(0, 0, 255); background-color: rgb(248, 222, 126); }
+        p:nth-child(4) { color: rgb(255, 165, 0); background-color: rgb(150, 150, 150); }
+        p:nth-child(5) { color: rgb(128, 0, 128); background-color: rgb(245, 245, 220); }
+        p:nth-child(6) { color: #FF5733; background-color: #C0C0C0; }
+        p:nth-child(7) { color: #DAF7A6; background-color: #808080; }
+        p:nth-child(8) { color: #581845; background-color: #FFFF66; }
+        p:nth-child(9) { color: #800000; background-color: #FFDAB9; }
+        p:nth-child(10) { color: #3498DB; background-color: #FF69B4; }
+    </style>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <p>Paragraph 6</p>
+    <p>Paragraph 7</p>
+    <p>Paragraph 8</p>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent and Child Div</title>
+    <style>
+        .parent {
+            width: 1000px;
+            height: 1000px;
+            background-color: #008000; /* Green */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .child {
+            width: 20%;
+            height: 15%;
+            background-color: #000000; /* Black */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Div Blocks</title>
+    <style>
+        .div1 { width: 110px; height: 110px; background-color: #FF0000; }
+        .div2 { width: 120px; height: 120px; background-color: #00FF00; }
+        .div3 { width: 130px; height: 130px; background-color: #0000FF; }
+        .div4 { width: 140px; height: 140px; background-color: #FFFF00; }
+        .div5 { width: 150px; height: 150px; background-color: #FF00FF; }
+        .div6 { width: 160px; height: 160px; background-color: #00FFFF; }
+        .div7 { width: 170px; height: 170px; background-color: #C0C0C0; }
+        .div8 { width: 180px; height: 180px; background-color: #800000; }
+        .div9 { width: 190px; height: 190px; background-color: #808000; }
+        .div10 { width: 200px; height: 200px; background-color: #008080; }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
+    <div class="div9"></div>
+    <div class="div10"></div>
+</body>
+</html>

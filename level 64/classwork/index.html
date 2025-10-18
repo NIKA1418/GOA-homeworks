@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>სათაურის ცენტრში განლაგება</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="main-title">ეს არის მთავარი სათაური</h1>
+    <button onclick="centerTitle()">button</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+h1 {
+    text-align: left; /* საწყისი მდგომარეობა */
+    transition: text-align 0.3s ease;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+function centerTitle() {
+    document.getElementById("main-title").style.textAlign = "center";
+}
+

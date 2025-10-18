@@ -1,0 +1,47 @@
+<p id="output"></p>
+
+<script>
+let message = "Welcome!";
+document.getElementById("output").textContent = message;
+</script>
+
+<div id="greeting">Hello!</div>
+<button onclick="changeText()">Click Me</button>
+
+<script>
+function changeText() {
+    document.getElementById("greeting").textContent = "Hi!";
+}
+</script>
+
+<h1 id="title">Hello World</h1>
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+function changeColor() {
+    document.getElementById("title").style.color = "red";
+}
+</script>
+
+<p id="counter">0</p>
+<button onclick="increaseCount()">Increase</button>
+
+<script>
+let count = 0;
+function increaseCount() {
+    count++;
+    document.getElementById("counter").textContent = count;
+}
+</script>
+
+<p id="status" style="color: rgb(0, 0, 0);">Offline</p>
+<button onclick="changeStatus()">Go Online</button>
+
+<script>
+function changeStatus() {
+    let statusElement = document.getElementById("status");
+    statusElement.textContent = "Online";
+    statusElement.style.color = "green";
+}
+</script>
+

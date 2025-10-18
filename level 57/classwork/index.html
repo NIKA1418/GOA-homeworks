@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation</title>
+  <style>
+    /* კონტეინერის სტილი */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+      position: relative;
+      animation: moveBox 5s ease-in infinite;
+      animation-delay: 2s;
+    }
+
+    /* keyframes */
+    @keyframes moveBox {
+      0% {
+        transform: translateX(0);
+        background-color: coral;
+      }
+      50% {
+        transform: translateX(150px);
+        background-color: lightblue;
+      }
+      100% {
+        transform: translateX(300px);
+        background-color: lightgreen;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
+__

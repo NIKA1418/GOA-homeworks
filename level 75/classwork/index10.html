@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>ჩემი ელემენტები:</h3>
+
+    <p class="myClass">პირველი ელემენტი</p>
+    <p class="myClass">მეორე ელემენტი</p>
+    <p class="myClass">მესამე ელემენტი</p>
+    <p class="myClass">მეოთხე ელემენტი</p>
+    <p class="myClass">მეხუთე ელემენტი</p>
+
+    <button onclick="printText()">დააწკაპე ტექსტების სანახავად</button>
+
+    <script>
+      function printText() {
+        const items = document.getElementsByClassName("myClass");
+        for (let i = 0; i < items.length; i++) {
+          console.log(items[i].textContent);
+          alert(items[i].textContent);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+/* Move box from left to right */
+@keyframes moveRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(200px); }
+}
+
+.box {
+  animation: moveRight 2s ease-in-out;
+}
+
+/* Background color change */
+@keyframes bgChange {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+
+.element {
+  animation: bgChange 5s linear;
+}
+
+/* Rotate element 360 degrees */
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotating {
+  animation: rotate360 2s ease-in-out;
+}
+
+/* Pulse effect */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.pulsing {
+  animation: pulse 1s infinite;
+}
+
+
+
+/* Bouncing ball 3 times */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+.ball {
+  animation: bounce 1s ease-in-out 3;
+}
+
+/* Infinite loading spinner */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* Start animation after 2 seconds */
+.delayed {
+  animation: fadeIn 2s ease-in-out 2s;
+}
+
+/* Sequence of animations */
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.element1 { animation: appear 2s ease-in-out 0s; }
+.element2 { animation: appear 2s ease-in-out 2s; }
+.element3 { animation: appear 2s ease-in-out 4s; }
+
+/* Fading effect for 10 seconds */
+@keyframes fade {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fadeEffect {
+  animation: fade 10s ease-in-out;
+}

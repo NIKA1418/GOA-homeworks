@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ანიმაციები</title>
+    <style>
+        /* Scale an image up when hovered */
+        .image-hover {
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+        .image-hover:hover {
+            transform: scale(1.2);
+        }
+
+        /* Rotate a button 45 degrees on click */
+        .button-click {
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .button-click:active {
+            transform: rotate(45deg);
+        }
+
+        /* Translate a div 50px to the right on hover */
+        .div-hover {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: transform 0.3s ease;
+        }
+        .div-hover:hover {
+            transform: translateX(50px);
+        }
+
+        /* Continuously rotate an icon using animation */
+        @keyframes rotate-icon {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .icon-rotate {
+            animation: rotate-icon 2s linear infinite;
+        }
+
+        /* Scale down a card slightly on hover for a "press" effect */
+        .card-hover {
+            width: 200px;
+            padding: 20px;
+            background-color: lightgray;
+            transition: transform 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: scale(0.95);
+        }
+
+        /* Translate a modal from bottom to center on open */
+        .modal {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            position: fixed;
+            bottom: -300px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            transition: bottom 0.5s ease;
+        }
+        .modal.show {
+            bottom: 50%;
+        }
+
+        /* Rotate a loading spinner indefinitely */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid gray;
+            border-top: 5px solid black;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Translate a tooltip slightly upward when visible */
+        .tooltip {
+            position: absolute;
+            bottom: -30px;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            transition: transform 0.3s ease;
+        }
+        .tooltip.visible {
+            transform: translateY(-10px);
+        }
+
+        /* Scale a background image slightly for a zoom effect */
+        .bg-zoom {
+            width: 100%;
+            height: 300px;
+            background-image: url('your-image.jpg');
+            background-size: cover;
+            transition: transform 0.3s ease;
+        }
+        .bg-zoom:hover {
+            transform: scale(1.1);
+        }
+
+        /* Rotate a text element 180 degrees on toggle */
+        .text-toggle {
+            transition: transform 0.3s ease;
+        }
+        .text-toggle.toggle {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <img src="your-image.jpg" class="image-hover" alt="Hover Image">
+    <button class="button-click">Click Me</button>
+    <div class="div-hover"></div>
+    <div class="icon-rotate">🔄</div>
+    <div class="card-hover">Hover Over Me</div>
+    <div class="modal">Modal Content</div>
+    <div class="spinner"></div>
+    <div class="tooltip">Tooltip Text</div>
+    <div class="bg-zoom"></div>
+    <p class="text-toggle">Toggle Me</p>
+
+    <script>
+        document.querySelector('.text-toggle').addEventListener('click', function() {
+            this.classList.toggle('toggle');
+        });
+
+        document.querySelector('.modal').classList.add('show');
+    </script>
+
+</body>
+</html>
+

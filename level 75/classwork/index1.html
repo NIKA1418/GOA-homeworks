@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ფონტის ზრდა</title>
+</head>
+<body>
+
+  <p id="myParagraph" style="font-size: 10px;">
+    დააკლიკე რომ გაიზარდოს
+  </p>
+
+  <button onclick="startIncreasingFont()">დააკლიკე გასადიდებლად</button>
+
+  <script>
+    let currentSize = 10;
+    let intervalId;
+
+    function startIncreasingFont() {
+      if (!intervalId) {
+        intervalId = setInterval(() => {
+          currentSize += 1;
+          document.getElementById("myParagraph").style.fontSize = currentSize + "px";
+        }, 1000);
+      }
+    }
+  </script>
+
+</body>
+</html>
+

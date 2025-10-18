@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>მარცხნივ მოძრავი ღილაკი</title>
+  <style>
+    #moveButton {
+      position: relative;
+      left: 0;
+      transition: left 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="startMoving()">დაამატე ღილაკი</button>
+  <div id="buttonContainer"></div>
+
+  <script>
+    function startMoving() {
+      const button = document.createElement("button");
+      button.textContent = "მოძრაობა";
+      button.id = "moveButton";
+
+      document.getElementById("buttonContainer").appendChild(button);
+
+      let leftOffset = 0;
+      setInterval(() => {
+        leftOffset -= 50;
+        button.style.left = leftOffset + "px";
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
+

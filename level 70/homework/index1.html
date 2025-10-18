@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ფერის შეცვლა</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="colorForm" onsubmit="changeColors(event)">
+        <label for="textColor">ტექსტის ფერი:</label>
+        <input type="text" id="textColor" name="textColor" placeholder="მაგ.: red">
+        
+        <label for="bgColor">ფონის ფერი:</label>
+        <input type="text" id="bgColor" name="bgColor" placeholder="მაგ.: blue">
+        
+        <button type="submit">შეცვლა</button>
+    </form>
+
+    <script>
+        function changeColors(event) {
+            event.preventDefault(); 
+
+            let textColor = document.getElementById("textColor").value;
+            let bgColor = document.getElementById("bgColor").value;
+
+            document.body.style.color = textColor;
+            document.body.style.backgroundColor = bgColor;
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>დივ ბლოკის პარაგრაფები</title>
+</head>
+<body>
+  <p>ეს პარაგრაფი დივის გარეთაა 1</p>
+  <p>ეს პარაგრაფი დივის გარეთაა 2</p>
+
+  <div id="myDiv">
+    <p>ეს პარაგრაფი დივშია 1</p>
+    <p>ეს პარაგრაფი დივშია 2</p>
+    <p>ეს პარაგრაფი დივშია 3</p>
+  </div>
+
+  <script>
+    const div = document.getElementById("myDiv");
+    const paragraphs = div.getElementsByTagName("p");
+
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.color = "green";
+      paragraphs[i].style.backgroundColor = "black";
+    }
+  </script>
+</body>
+</html>
+

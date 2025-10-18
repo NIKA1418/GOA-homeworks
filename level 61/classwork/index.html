@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>classwork</title>
+    <style>
+        #image2 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="image1.jpg" alt="სურათი 1" onclick="showAlert()">
+    <img id="image2" src="image2.jpg" alt="სურათი 2" onclick="resizeImage()">
+
+    <script>
+        function showAlert() {
+            alert("nika");
+        }
+
+        function resizeImage() {
+            document.getElementById("image2").style.height = "500px";
+        }
+    </script>
+
+</body>
+</html>
+__

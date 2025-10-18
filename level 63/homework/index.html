@@ -1,0 +1,41 @@
+let name = "Nika"; 
+let age = 10; 
+let city = "Tbilisi";
+
+console.log(name, age, city);
+
+let score = 10;
+console.log("Initial score:", score);
+
+score = 15;
+console.log("Updated score:", score);
+
+<p id="output"></p>
+
+let message = "Welcome!";
+document.getElementById("output").textContent = message;
+
+<div id="greeting">Hello!</div>
+<button onclick="changeGreeting()">Click me</button>
+
+function changeGreeting() {
+    document.getElementById("greeting").textContent = "Hi there!";
+}
+
+<h1 id="title">Hello World</h1>
+<button onclick="changeColor()">Change Color</button>
+
+function changeColor() {
+    document.getElementById("title").style.color = "red";
+}
+
+<p id="counter">0</p>
+<button onclick="increaseCounter()">Increase</button>
+
+let count = 0;
+
+function increaseCounter() {
+    count++;
+    document.getElementById("counter").textContent = count;
+}
+

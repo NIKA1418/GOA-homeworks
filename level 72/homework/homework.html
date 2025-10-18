@@ -1,0 +1,44 @@
+<button id="alertBtn">Click Me</button>
+
+<script>
+document.getElementById("alertBtn").addEventListener("click", function() {
+  alert("Button was clicked! ღილაკზე დააჭირეთ!");
+});
+</script>
+
+<p id="hoverPara">Hover over me!</p>
+
+<script>
+document.getElementById("hoverPara").addEventListener("mouseover", function() {
+  this.textContent = "Text changed! ტექსტი შეიცვალა!";
+});
+</script>
+
+<div id="colorBox" style="width:200px; height:100px; background-color:rgba(8, 236, 126, 0.456); cursor:pointer;">
+  Click to toggle color
+</div>
+
+<script>
+document.getElementById("colorBox").addEventListener("click", function() {
+  this.style.backgroundColor = this.style.backgroundColor === "lightblue" ? "lightgreen" : "lightblue";
+});
+</script>
+
+<input type="text" id="textInput" value="Hello everyone!">
+
+<script>
+document.getElementById("textInput").addEventListener("click", function() {
+  console.log("Input value:", this.value);
+});
+</script>
+
+<button id="toggleImgBtn">Show/Hide Image</button>
+<br>
+<img id="myImage" src="https://via.placeholder.com/150" style="display:none;">
+
+<script>
+document.getElementById("toggleImgBtn").addEventListener("click", function() {
+  const img = document.getElementById("myImage");
+  img.style.display = img.style.display === "none" ? "block" : "none";
+});
+</script>

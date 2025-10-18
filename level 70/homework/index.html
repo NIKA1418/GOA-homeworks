@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <form onsubmit="checkLogin(event)">
+        <input type="text" id="userInput" placeholder="Enter value">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function checkLogin(event) {
+            event.preventDefault(); 
+
+            let inputValue = document.getElementById("userInput").value;
+
+            if (inputValue === "true") {
+                alert("logged in");
+            } else {
+                alert("try again");
+            }
+        }
+    </script>
+</body>
+</html>
+

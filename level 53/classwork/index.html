@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ფოთოლის მსგავსი</title>
+    <style>
+        .custom-element {
+            width: 300px;
+            height: 150px;
+            background-color: green;
+            border: 2px solid black;
+            border-top-left-radius: 150px; /* მაქსიმალური მომრგვალებული */
+            border-bottom-right-radius: 150px; /* მაქსიმალური მომრგვალებული */
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            transition: transform 0.3s ease, scale 0.3s ease, translate 0.3s ease; /* გადასვლის ეფექტი */
+        }
+        .custom-element:hover {
+            transform: rotate(40deg) scale(2) translateY(200px); /* მოძრაობა და ვიზუალური ეფექტი */
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-element"></div>
+</body>
+</html>
