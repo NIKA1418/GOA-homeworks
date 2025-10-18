@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>დროის ჩვენება</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    #timeDisplay {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showCurrentTime()">ნახე ახლანდელი დრო</button>
+  <p id="timeDisplay">დრო აქ გამოჩნდება</p>
+
+  <script>
+    function showCurrentTime() {
+      const now = new Date();
+
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      const formattedTime = `${year}-${month}-${day}, ${hours}-${minutes}-${seconds}`;
+      document.getElementById("timeDisplay").textContent = formattedTime;
+    }
+  </script>
+
+</body>
+</html>
